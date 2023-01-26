@@ -1,0 +1,85 @@
+.hero_nav {
+    background: $light-grey;
+
+    .slide-nav {
+        position: fixed;
+        background: $primary;
+        height: 100%;
+        z-index: 100000000;
+        width: 100%;
+        padding: 50px;
+        color: $white;
+        font-weight: 500;
+        font-size: 1.25rem;
+        transform: translateX(-100%);
+        transition: 0.2s all ease-in-out;
+
+        &.nav-open {
+            transform: translateX(0);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 24px;
+        }
+
+        .nav-btns {
+            .btn {
+                height: 60px;
+                border-radius: 100px;
+                font-weight: 700;
+            }
+        }
+
+        .nav-link {
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+    }
+
+    .navigation {
+        border-bottom: 2px solid $dark-grey;
+
+        .navbar-brand {
+            max-width: 437px;
+        }
+
+        .navbar-collapse {
+            align-items: initial;
+        }
+
+        ul.navbar-nav {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+
+            .nav-item {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                border-left: 2px solid $dark-grey;
+                
+                a.nav-link {
+                    padding: 8px 44px;
+                    font-size: 18px;
+                    letter-spacing: -0.02em;
+                    color: $black;
+                }
+            }
+        }
+
+        .nav-btns {
+            .btn {
+                height: 126px;
+                display: flex;
+                align-items: center;
+                border-radius: 0;
+                font-size: 18px;
+                padding: 24px 44px;
+
+                &.left-border {
+                    border-left: 2px solid $dark-grey;
+                }
+            }
+        }
+    }
+}
