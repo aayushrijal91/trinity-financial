@@ -2,13 +2,13 @@ $primary: #2B2E87;
 $light-grey: #F0EEEC;
 $dark-grey: #d9d9d9;
 $black: #030606;
+$dark: #06070F;
 $grey: #696969;
 
 $primary-light: #3EB8DE;
 $secondary: #CF4275;
 $tertiary: #3729C2;
 $quartinary: #1190CE;
-$dark: #393A41;
 $off-grey: #BDC1C2;
 $light: #F1F6F8;
 $white: #ffffff;
@@ -48,7 +48,7 @@ $container-max-widths: (
     md: 740px,
     lg: 1280px,
     xl: 1442px,
-    xxl: 1525px,
+    xxl: 1571px,
     ) !default;
 
 $spacer: 1rem !default;
@@ -83,18 +83,13 @@ $spacers: map-merge((0: 0,
 
 $font-sizes: (
     75: 75px,
+    70: 70px,
+    50: 50px,
     25: 25px,
+    23: 23px,
     21: 21px,
     14: 14px,
-
-
-    72: 72px,
-    64: 64px,
-    48: 48px,
-    36: 36px,
-    32: 32px,
-    30: 30px,
-    18: 18px,
+    13: 13px,
 );
 
 $border-radius: .25rem !default;
@@ -107,11 +102,10 @@ $utilities: map-merge(("line-height":(property: line-height,
                 responsive: true,
                 values: (1:1,
                     2:2,
-                    "111":1.11,
-                    "12":1.2,
-                    "1_25": 1.25,
-                    "1_65": 1.65,
-                    "1_35" : 1.35)),
+                    "1_2":1.2,
+                    "1_4": 1.4,
+                    "1_6": 1.6,
+                    "1_87" : 1.87)),
             "rounded": (property: border-radius,
                 class: rounded,
                 responsive: true,
@@ -144,8 +138,7 @@ $utilities: map-merge(("line-height":(property: line-height,
                     900:900)),
             "letter-spacing": (property: letter-spacing,
                 class: ls,
-                values: (
-                    1: 0.01em,
+                values: (1: 0.01em,
                     2: -0.02em,
                     3: -0.03em))), $utilities
 );
