@@ -28,35 +28,7 @@ get_template_part('parts/section', 'banner');
     </section>
 
     <?php get_template_part('parts/section', 'assisted_services'); ?>
+    <?php get_template_part('parts/section', 'client_video'); ?>
 
-    <section class="section_2">
-        <?php $section_2 = get_field('section_2'); ?>
-        <div class="container">
-            <div class="text-center fw-900 fs-57"><?= $section_2['heading'] ?></div>
-            <div class="text-center fw-500 fs-43 lh-2 pt-3"><?= $section_2['sub_heading'] ?></div>
-
-            <div class="row gy-4 gx-6 align-items-end pt-7">
-                <?php
-                if (have_rows('section_2')) :
-                    while (have_rows('section_2')) : the_row();
-                        if (have_rows('videos')) :
-                            while (have_rows('videos')) : the_row();
-                                $thumbnail = get_sub_field('thumbnail');
-                                $url = get_sub_field('url');
-                ?>
-                                <div class="col-md-6">
-                                    <a href="<?= $url ?>" target="_blank">
-                                        <img src="<?= $thumbnail['url'] ?>" alt="<?= $thumbnail['alt'] ?>" class="w-100">
-                                    </a>
-                                </div>
-                <?php
-                            endwhile;
-                        endif;
-                    endwhile;
-                endif;
-                ?>
-            </div>
-        </div>
-    </section>
 </div>
 <?php get_footer(); ?>

@@ -10,3 +10,53 @@
         padding: 30.5px 55px;
     }
 }
+
+.client_video {
+    padding: 83px 0;
+}
+
+.contact_us_form {
+    background: $black;
+    padding: 64px 44px;
+    color: $white;
+    margin-top: 55px;
+
+    .form-group {
+        background: #060606;
+        border: 2.7536px solid #08090C;
+        border-radius: 9.17867px;
+        padding: 16px 30px;
+        margin-bottom: 33px;
+
+        label {
+            font-size: 12px;
+            letter-spacing: -0.02em;
+            font-size: 500;
+            line-height: 2;
+        }
+
+        .form-control {
+            border: 0;
+            background: none;
+            color: $white;
+            padding: 0;
+            height: 28px;
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+
+    .wpcf7-submit {
+        width: 100%;
+        background: $primary;
+        height: 100px;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        border-radius: 0;
+    }
+}

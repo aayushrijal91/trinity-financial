@@ -1,0 +1,89 @@
+header{
+    &.homepage_header {
+        background: $light-grey imgUrl('homepage_banner.png') center bottom;
+        background-size: contain;
+        padding: 104px 0 560px;
+    }
+
+    &.subpage_header {
+        background: $light-grey;
+        padding: 95px 0;
+    }
+}
+
+.homepage {
+    section.section_1 {
+        background: imgUrl('homepage_section_1.png') left bottom, linear-gradient(90deg, $dark 0% 73%, $primary 73% 100%);
+        padding: 140px 0 110px;
+        color: $white;
+    }
+
+    section.section_2 {
+        background: $light-grey;
+        padding: 177px 0 79px;
+
+        .description {
+            span {
+                font-weight: 800;
+                color: $primary;
+            }
+        }
+    }
+
+    section.section_3 {
+        background: $light-grey;
+    }
+}
+
+.about_us {
+    section.section_1 {
+        background: $dark;
+        padding: 175px 0;
+
+        p {
+            padding-bottom: 24px;
+        }
+    }
+}
+
+.meet_the_team {
+    section.section_1 {
+        padding: 115px 0;
+
+        .team_member {
+            .name_card {
+                width: 264px;
+            }
+        }
+    }
+}
+
+footer {
+    background: linear-gradient(90deg, #000000 0 30%, $dark 30% 100%);
+    color: $white;
+    
+    .quick-links {
+        padding: 121px 0 101px;
+    }
+
+    hr {
+        border-color: #C4C4C4;
+        margin: 0;
+
+    }
+
+    .footer-bottom {
+        padding: 80px 0;
+    }
+
+    .footer_menu {
+        ul.menu {
+            padding-inline-start: 0;
+            margin: 0;
+
+            li {
+                padding: 16px 0;
+            }
+        }
+    }
+}
