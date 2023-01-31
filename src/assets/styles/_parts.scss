@@ -2,4 +2,11 @@
     background: $primary;
     padding: 162px 0;
     color: $white;
+
+    .assisted_service_card {
+        border: 4px solid #363F94;
+        border-radius: 13px;
+        width: 100%;
+        padding: 30.5px 55px;
+    }
 }
