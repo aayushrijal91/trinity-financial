@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: About Us Page
+ * Template Name: About Us
  * The About Us page
  *
  */
@@ -29,6 +29,5 @@ get_template_part('parts/section', 'banner');
 
     <?php get_template_part('parts/section', 'assisted_services'); ?>
     <?php get_template_part('parts/section', 'client_video'); ?>
-
 </div>
 <?php get_footer(); ?>

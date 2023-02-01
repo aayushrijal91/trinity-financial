@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Meet The Team Page
+ * Template Name: Meet The Team
  * The Meet The Team Page
  *
  */

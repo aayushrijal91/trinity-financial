@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Contact Us Page
+ * Template Name: Contact Us
  * The Contact Us page
  *
  */
