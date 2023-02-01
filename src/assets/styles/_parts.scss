@@ -60,3 +60,27 @@
         border-radius: 0;
     }
 }
+
+.free_review {
+    position: relative;
+
+    .inner {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .part_1 {
+            max-width: 323px;
+            background: $primary;
+            padding: 60px 28px 53px;
+            color: $white;
+        }
+
+        .part_2 {
+            max-width: 325px;
+            padding: 41px 31px;
+            color: $white;
+            background: $black;
+        }
+    }
+}

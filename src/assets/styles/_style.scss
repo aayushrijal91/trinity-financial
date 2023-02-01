@@ -150,8 +150,17 @@ header {
     letter-spacing: -0.02em;
 }
 
+.terms_and_conditions {
+    background: $light-grey;
+    color: $jet-black;
+
+    .content {
+        padding: 31.5px 0;
+    }
+}
+
 footer {
-    background: linear-gradient(90deg, #000000 0 30%, $dark 30% 100%);
+    background: linear-gradient(90deg, $jet-black 0 30%, $dark 30% 100%);
     color: $white;
 
     .quick-links {

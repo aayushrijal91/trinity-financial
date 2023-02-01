@@ -12,7 +12,7 @@ get_template_part('parts/section', 'banner');
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <div class="heading fs-50 fw-600 text-center lh-1_6">Want to find out more? <span>View some frequently asked questions below.</span></div>
+                <div class="heading fs-50 fw-600 text-center lh-1_6"><?= get_field('heading') ?></div>
             </div>
         </div>
         <div class="accordion-container">
