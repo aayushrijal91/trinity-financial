@@ -143,12 +143,23 @@ header {
     }
 }
 
+.contact_us {
+    background: imgUrl('contact-us.png') 36% 22%, linear-gradient(90deg, $dark 0% 73%, $primary 73% 100%);
+    padding: 108px 0 0;
+    color: $white;
+    letter-spacing: -0.02em;
+}
+
 footer {
     background: linear-gradient(90deg, #000000 0 30%, $dark 30% 100%);
     color: $white;
 
     .quick-links {
         padding: 121px 0 101px;
+
+        .description span {
+            font-weight: 700;
+        }
     }
 
     hr {

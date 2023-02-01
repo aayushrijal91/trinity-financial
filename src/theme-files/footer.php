@@ -1,10 +1,10 @@
 <footer>
     <div class="container">
         <div class="quick-links">
-            <div class="row">
-                <div class="col-6 col-md-auto col-lg-4">
+            <div class="row justify-content-between">
+                <div class="col-6 col-md-auto col-lg-3">
                     <div class="fw-800 fs-25 pb-3">Contact Us</div>
-                    <div class="fs-13 lh-2 pb-2">Our team will help you search, choose & settle<br> your loan. <span class="fw-700">Chat to one of our loan specialists at a<br> time that suits you.</span></div>
+                    <div class="description fs-13 lh-2 pb-2 pe-xxl-6"><?= get_field('footer', 'options')['main_description'] ?></div>
                     <div class="fs-13 pt-4">
                         <div class="fw-800 lh-2">General Enquiries</div>
                         <a href="tel:<?= get_field('phone_number', 'options') ?>" class="text-white text-decoration-none"><?= get_field('phone_number', 'options') ?></a>
@@ -23,7 +23,7 @@
                         'container_class' => 'footer_menu',
                     )); ?>
                 </div>
-                <div class="col-6 col-md-auto col-lg-4">
+                <div class="col-6 col-md-auto col-lg-3">
                     <div class="fw-800 fs-25 pb-4">Services</div>
                     <?php wp_nav_menu(array(
                         'menu' => 'Footer Resources',
@@ -47,7 +47,7 @@
         <div class="footer-bottom">
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto">
-                    <div class="fs-14">Copyright © 2021 Trinity Financial Services &nbsp; | &nbsp; Australian Credit Licence Number 383704</div>
+                    <div class="fs-14"><?= get_field('footer', 'options')['copyright'] ?></div>
                 </div>
                 <div class="col-auto">
                     <?php if (have_rows('socials', 'options')) :
@@ -65,7 +65,38 @@
                 </div>
                 <div class="col-auto">
                     <div class="row align-items-center">
-                        <div class="col-auto fs-14">Privacy Policy &nbsp; | &nbsp; Terms & Conditions &nbsp; | &nbsp; Disclaimer</div>
+                        <div class="col-auto">
+                            <?php
+                            $totalLinks = get_field('footer', 'options')['links'] ? count(get_field('footer', 'options')['links']) : 0;
+
+                            if (have_rows('footer', 'options')) :
+                                while (have_rows('footer', 'options')) : the_row();
+                                    if (have_rows('links', 'options')) :
+                                        $index = 1;
+                                        while (have_rows('links', 'options')) : the_row();
+                                            $linkUrl = get_sub_field('link')['url'];
+                                            $linkTitle = get_sub_field('link')['title'];
+
+                                            if (strpos($linkUrl, 'http') === 0) {
+                            ?>
+                                                <a href="<?= $linkUrl ?>" class="text-white fs-14 text-decoration-none"><?= $linkTitle ?></a>
+                                            <?php
+                                            } else { ?>
+                                                <span class="text-white fs-14"><?= $linkTitle ?></span>
+                            <?php
+                                            }
+
+                                            if ($index < $totalLinks) {
+                                                echo "<span class='px-2'>|</span>";
+                                            }
+
+                                            $index++;
+                                        endwhile;
+                                    endif;
+                                endwhile;
+                            endif;
+                            ?>
+                        </div>
                         <div class="col-auto">
                             <a href="https://www.aiims.com.au/like-our-work/" target="_blank">
                                 <img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims">
