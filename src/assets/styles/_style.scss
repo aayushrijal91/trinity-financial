@@ -244,6 +244,27 @@ header {
     }
 }
 
+.services {
+    padding: 116px 0 153px;
+
+    .service_card {
+        .content {
+            margin-top: -97.5px;
+            position: relative;
+            margin-left: auto;
+            width: 75%;
+            background: $primary;
+            padding: 30px 35px;
+            color: $white;
+            height: 195px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
+}
+
 footer {
     background: linear-gradient(90deg, $jet-black 0 30%, $dark 30% 100%);
     color: $white;
