@@ -1,7 +1,7 @@
 <?php
 get_template_part('parts/section', 'nav');
 
-if (!empty(get_field('banner')['heading'])) {
+if (!empty(get_field('banner')['heading']) && !is_home()) {
     $heading = get_field('banner')['heading'];
     $sub_heading = get_field('banner')['sub_heading'];
 } elseif (is_home()) {
@@ -13,7 +13,7 @@ if (!empty(get_field('banner')['heading'])) {
     <header class="subpage_header">
         <div class="container">
             <div class="row align-items-center">
-                <?php if (is_page_template('page-templates/terms-conditions.php')) { ?>
+                <?php if (is_page_template('page-templates/terms-conditions.php') || is_single()) { ?>
                     <div class="col-auto">
                         <div class="ls-2 fs-60 fw-900"><?= $heading ?></div>
                     </div>

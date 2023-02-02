@@ -227,8 +227,21 @@ header {
     }
 }
 
-.404_page {
-    
+.blog_post {
+    background-color: $light-grey;
+    font-size: 21px;
+    letter-spacing: -0.02em;
+    line-height: 1.95;
+    padding-bottom: 105px;
+
+    ul,
+    ol {
+        padding-inline-start: 100px;
+
+        li::marker {
+            font-weight: 900;
+        }
+    }
 }
 
 footer {
