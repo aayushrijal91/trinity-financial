@@ -13,7 +13,11 @@ if (!empty(get_field('banner')['heading']) && !is_home()) {
     <header class="subpage_header">
         <div class="container">
             <div class="row align-items-center">
-                <?php if (is_page_template('page-templates/terms-conditions.php') || is_single()) { ?>
+                <?php if (is_single() && get_post_type() == "services") { ?>
+                    <div class="col-6">
+                        <div class="ls-3 fs-75 fw-600"><?= $heading ?></div>
+                    </div>
+                <?php } else if (is_page_template('page-templates/terms-conditions.php') || is_single()) { ?>
                     <div class="col-auto">
                         <div class="ls-2 fs-60 fw-900"><?= $heading ?></div>
                     </div>

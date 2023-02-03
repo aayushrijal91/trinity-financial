@@ -23,16 +23,34 @@
                         'container_class' => 'footer_menu',
                     )); ?>
                 </div>
-                <div class="col-6 col-md-auto col-lg-3">
+                <div class="col-6 col-md-auto col-lg-4">
                     <div class="fw-800 fs-25 pb-4">Services</div>
-                    <?php wp_nav_menu(array(
-                        'menu' => 'Footer Resources',
-                        'item_class' => 'nav-item',
-                        'link_class' => 'nav-link',
-                        'container_class' => 'footer_menu',
-                    )); ?>
+                    <div class="footer_menu">
+                        <ul class="menu menu_services">
+                            <?php
+                            $args = array(
+                                'posts_per_page' => -1,
+                                'post_type' => 'services',
+                                'orderby' => 'menu_order',
+                                'order' => 'ASC',
+                            );
+
+                            $the_query = new WP_Query($args);
+                            if ($the_query->have_posts()) :
+                                while ($the_query->have_posts()) :
+                                    $the_query->the_post();
+                            ?>
+                                    <li class="menu-item nav-item">
+                                        <a href="<?= get_the_permalink() ?>" class="nav-link"><?= get_the_title() ?></a>
+                                    </li>
+                            <?php
+                                endwhile;
+                            endif;
+                            ?>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-6 col-md-auto col-lg-2">
+                <div class="col-6 col-md-auto">
                     <div class="fw-800 fs-25 pb-4">Contact</div>
                     <?php wp_nav_menu(array(
                         'menu' => 'Footer Contact',

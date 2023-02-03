@@ -265,6 +265,46 @@ header {
     }
 }
 
+.inner_service {
+    .template_1 {
+        .section_1 {
+            background: $dark;
+            padding: 195px 0;
+            color: $white;
+
+            .description {
+                column-count: 2;
+                line-height: 1.8;
+                gap: 78px;
+            }
+        }
+
+        .section_3 {
+            position: relative;
+        
+            .inner {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+        
+                .part_1 {
+                    max-width: 323px;
+                    background: $primary;
+                    padding: 60px 28px 53px;
+                    color: $white;
+                }
+        
+                .part_2 {
+                    max-width: 325px;
+                    padding: 41px 31px;
+                    color: $white;
+                    background: $black;
+                }
+            }
+        }
+    }
+}
+
 footer {
     background: linear-gradient(90deg, $jet-black 0 30%, $dark 30% 100%);
     color: $white;
@@ -280,7 +320,6 @@ footer {
     hr {
         border-color: #C4C4C4;
         margin: 0;
-
     }
 
     .footer-bottom {
@@ -296,6 +335,11 @@ footer {
             li {
                 padding: 16px 0;
             }
+        }
+
+        ul.menu_services {
+            column-count: 2;
+            gap: 35px;
         }
     }
 }
