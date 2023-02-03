@@ -303,6 +303,56 @@ header {
             }
         }
     }
+
+    .template_2 {
+        .section_1 {
+            background: $dark;
+            padding: 155px 0;
+            color: $white;
+
+            .description {
+                column-count: 2;
+                line-height: 1.8;
+                gap: 78px;
+            }
+        }
+
+        .section_2 {
+            padding: 110px 0 136px;
+        }
+
+        .section_3 {
+            padding: 141px 0;
+        }
+
+        .section_4 {
+            padding: 122px 0;
+        }
+
+        .section_5 {
+            position: relative;
+        
+            .inner {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+        
+                .part_1 {
+                    max-width: 323px;
+                    background: $primary;
+                    padding: 60px 28px 53px;
+                    color: $white;
+                }
+        
+                .part_2 {
+                    max-width: 325px;
+                    padding: 41px 31px;
+                    color: $white;
+                    background: $black;
+                }
+            }
+        }
+    }
 }
 
 footer {
