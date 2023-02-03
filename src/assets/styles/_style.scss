@@ -266,49 +266,49 @@ header {
 }
 
 .inner_service {
-    .template_1 {
-        .section_1 {
-            background: $dark;
-            padding: 195px 0;
-            color: $white;
+    .header {
+        background: $dark;
+        padding: 155px 0;
+        color: $white;
 
-            .description {
-                column-count: 2;
-                line-height: 1.8;
-                gap: 78px;
-            }
+        .description {
+            column-count: 2;
+            line-height: 1.8;
+            gap: 78px;
         }
+    }
 
-        .section_3 {
-            position: relative;
-        
-            .inner {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-        
-                .part_1 {
-                    max-width: 323px;
-                    background: $primary;
-                    padding: 60px 28px 53px;
-                    color: $white;
-                }
-        
-                .part_2 {
-                    max-width: 325px;
-                    padding: 41px 31px;
-                    color: $white;
-                    background: $black;
-                }
+    .footer {
+        position: relative;
+
+        .inner {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            .part_1 {
+                max-width: 323px;
+                background: $primary;
+                padding: 60px 28px 53px;
+                color: $white;
+            }
+
+            .part_2 {
+                max-width: 325px;
+                padding: 41px 31px;
+                color: $white;
+                background: $black;
             }
         }
     }
 
     .template_2 {
         .section_1 {
-            background: $dark;
-            padding: 155px 0;
-            color: $white;
+            padding: 110px 0 136px;
+        }
+
+        .section_2 {
+            padding: 141px 0;
 
             .description {
                 column-count: 2;
@@ -317,39 +317,38 @@ header {
             }
         }
 
-        .section_2 {
-            padding: 110px 0 136px;
-        }
-
         .section_3 {
-            padding: 141px 0;
-        }
-
-        .section_4 {
             padding: 122px 0;
         }
+    }
 
-        .section_5 {
-            position: relative;
-        
-            .inner {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-        
-                .part_1 {
-                    max-width: 323px;
-                    background: $primary;
-                    padding: 60px 28px 53px;
-                    color: $white;
-                }
-        
-                .part_2 {
-                    max-width: 325px;
-                    padding: 41px 31px;
-                    color: $white;
-                    background: $black;
-                }
+    .template_3 {
+        padding: 146px 0 126px;
+
+        .grid_container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .grid_item {
+            border: 1px solid $dark-grey;
+            text-align: center;
+            padding: 78px 0;
+        }
+
+        .grid_item{
+            &:first-child,&:nth-child(2),&:nth-child(3),&:nth-child(4) {
+                border-top: 0;
+            }
+
+            &:first-child,&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8) {
+                border-bottom: 0;
+                border-left: 0;
+            }
+
+            &:nth-child(4), &:last-child {
+                border-right: 0;
             }
         }
     }
