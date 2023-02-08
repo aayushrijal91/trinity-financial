@@ -4,7 +4,7 @@
     <header class="homepage_header">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-10 col-xl-9">
                     <h1 class="ls-3 fs-75 fw-600 text-center"><?= get_field('banner')['heading']; ?></h1>
                     <div class="text-center text-grey ls-3 fs-25 py-5 py-lg-6"><?= get_field('banner')['sub_heading']; ?></div>
                     <div class="text-center">

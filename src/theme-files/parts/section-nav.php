@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="navigation">
-        <div class="container-fluid px-lg-0">
+        <div class="container-fluid px-xl-0">
             <nav class="navbar navbar-expand-xl navbar-light py-0">
                 <a href="javascript:void(0)" class="pe-4 d-xl-none" id="triggerSlideNav">
                     <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@
                     </svg>
                 </a>
 
-                <a class="navbar-brand px-lg-4 m-0" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
+                <a class="navbar-brand px-xl-4 m-0" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
                 <div class="collapse navbar-collapse justify-content-end" id="mainNav">
                     <?php wp_nav_menu(array(
                         'menu' => 'Primary Menu',

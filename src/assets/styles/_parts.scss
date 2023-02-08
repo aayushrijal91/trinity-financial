@@ -3,6 +3,10 @@
     padding: 162px 0;
     color: $white;
 
+    @include media-breakpoint-down(xl) {
+        padding: 120px 0;
+    }
+
     @include media-breakpoint-down(lg) {
         padding: 110px 0;
 
@@ -27,7 +31,7 @@
         width: 100%;
         padding: 30.5px 55px;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             padding: 24px;
         }
 
@@ -57,6 +61,11 @@
     padding: 64px 44px;
     color: $white;
     margin-top: 55px;
+
+    @include media-breakpoint-between(lg, xl) {
+        margin-top: 16px;
+        padding: 44px 16px;
+    }
 
     @include media-breakpoint-down(sm) {
         padding: 24px 0;
