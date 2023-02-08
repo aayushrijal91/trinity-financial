@@ -66,7 +66,7 @@
                     )); ?>
                     <div class="d-flex align-items-center nav-btns">
                         <div>
-                            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn left-border text-black py-2 px-5 fw-700">
+                            <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn left-border text-black py-2 px-4 px-xxl-5 fw-700">
                                 <?= get_field('phone_number', 'options') ?>
                             </a>
                         </div>

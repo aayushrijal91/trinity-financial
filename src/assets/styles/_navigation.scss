@@ -63,6 +63,10 @@
                     font-size: 18px;
                     letter-spacing: -0.02em;
                     color: $black;
+
+                    @include media-breakpoint-down(xxl) {
+                        padding: 8px 24px;
+                    }
                 }
             }
         }
