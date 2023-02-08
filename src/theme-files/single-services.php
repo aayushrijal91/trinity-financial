@@ -204,6 +204,62 @@ $template = get_field('choose_template');
             <?php endif; ?>
         </div>
     <?php elseif ($template == 'Template 5') : ?>
+        <div class="template_5">
+            <?php $section_1 = get_field('template_5')['section_1']; ?>
+            <?php if (!empty($section_1['title'])) : ?>
+                <div class="section_1">
+                    <div class="container">
+                        <div class="text-center fs-50 fw-600 ls-2 mb-8"><?= $section_1['title'] ?></div>
+                        <?php
+                        $totalList = count($section_1['section_1_list']);
+
+                        if (have_rows('template_5')) :
+                            while (have_rows('template_5')) : the_row();
+                                if (have_rows('section_1')) :
+                                    while (have_rows('section_1')) : the_row();
+                                        if (have_rows('section_1_list')) :
+                                            $index = 1;
+                                            while (have_rows('section_1_list')) : the_row();
+                        ?>
+                                                <div class="py-4 fs-24 fw-500 ls-2 d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                                    </svg>
+                                                    <div class="ps-4"><?= get_sub_field('text') ?></div>
+                                                </div>
+                                                <?php if ($index < $totalList) : ?>
+                                                    <hr>
+                        <?php
+                                                endif;
+                                                $index++;
+                                            endwhile;
+                                        endif;
+                                    endwhile;
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php $section_2 = get_field('template_5')['section_2']; ?>
+            <?php if (!empty($section_2['title'])) : ?>
+                <div class="section_2">
+                    <div class="container">
+                        <div class="row align-items-center gx-lg-6">
+                            <div class="col-6">
+                                <div class="fs-60 fw-500 pb-6"><?= $section_2['title'] ?></div>
+                                <div class="description fs-23 lh-2"><?= $section_2['description'] ?></div>
+                            </div>
+                            <div class="col-6">
+                                <img src="<?= $section_2['image']['url'] ?>" alt="<?= $section_2['image']['alt'] ?>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
     <?php endif; ?>
 
     <?php $footer = get_field('footer'); ?>
