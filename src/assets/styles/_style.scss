@@ -4,6 +4,10 @@ header {
         background-size: contain;
         padding: 104px 0 560px;
 
+        @include media-breakpoint-down(lg) {
+            padding: 104px 0 260px;
+        }
+
         @include media-breakpoint-down(sm) {
             padding: 90px 0 160px;
         }
@@ -21,10 +25,18 @@ header {
         padding: 140px 0 110px;
         color: $white;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
             background: $dark;
+            padding: 100px 0 48px;
+
+            .heading {
+                font-size: 3rem !important;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
             padding: 80px 0 48px;
-            
+
             .heading {
                 font-size: 1.75rem !important;
                 text-align: center;
@@ -40,6 +52,10 @@ header {
     section.section_2 {
         background: $light-grey;
         padding: 177px 0 79px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 120px 0 80px;
+        }
 
         @include media-breakpoint-down(sm) {
             padding: 80px 0;
@@ -294,17 +310,29 @@ header {
             padding: 78px 0;
         }
 
-        .grid_item{
-            &:first-child,&:nth-child(2),&:nth-child(3),&:nth-child(4) {
+        .grid_item {
+
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
                 border-top: 0;
             }
 
-            &:first-child,&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8) {
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(8) {
                 border-bottom: 0;
                 border-left: 0;
             }
 
-            &:nth-child(4), &:last-child {
+            &:nth-child(4),
+            &:last-child {
                 border-right: 0;
             }
         }
@@ -346,7 +374,7 @@ footer {
     .quick-links {
         padding: 121px 0 101px;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
             padding: 80px 0 64px;
         }
 
@@ -363,6 +391,10 @@ footer {
     .footer-bottom {
         padding: 80px 0;
 
+        @include media-breakpoint-down(lg) {
+            padding: 64px 0;
+        }
+
         @include media-breakpoint-down(sm) {
             padding: 40px 0;
         }
@@ -377,10 +409,12 @@ footer {
             li {
                 padding: 16px 0;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(lg) {
                     padding: 8px 0;
+                }
 
-                    a.nav-link {
+                a.nav-link {
+                    @include media-breakpoint-down(sm) {
                         font-size: 0.875rem;
                     }
                 }

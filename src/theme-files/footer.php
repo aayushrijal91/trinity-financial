@@ -1,8 +1,8 @@
 <footer>
     <div class="container">
         <div class="quick-links">
-            <div class="row justify-content-between gy-5">
-                <div class="col-md-auto col-lg-3 order-1">
+            <div class="row justify-content-lg-between gy-5">
+                <div class="col-md-6 col-lg-3 order-1">
                     <div class="fw-800 fs-25 pb-3">Contact Us</div>
                     <div class="description fs-13 lh-2 pb-2 pe-xxl-6"><?= get_field('footer', 'options')['main_description'] ?></div>
                     <div class="fs-13 pt-4">
@@ -14,7 +14,7 @@
                         <div class="text-white"><?= get_field('address', 'options') ?></div>
                     </div>
                 </div>
-                <div class="col-6 col-md-auto col-lg-2 order-2">
+                <div class="col-6 col-md-3 col-lg-2 order-2">
                     <div class="fw-800 fs-25 pb-4">Resources</div>
                     <?php wp_nav_menu(array(
                         'menu' => 'Footer Resources',
@@ -23,7 +23,7 @@
                         'container_class' => 'footer_menu',
                     )); ?>
                 </div>
-                <div class="col-md-auto col-lg-4 order-4 order-md-3">
+                <div class="col-md-9 col-lg-4 order-4 order-lg-3">
                     <div class="fw-800 fs-25 pb-4">Services</div>
                     <div class="footer_menu">
                         <ul class="menu menu_services">
@@ -50,7 +50,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-6 col-md-auto order-3 order-md-4">
+                <div class="col-6 col-md-3 col-lg-auto order-3 order-lg-4">
                     <div class="fw-800 fs-25 pb-4">Contact</div>
                     <?php wp_nav_menu(array(
                         'menu' => 'Footer Contact',
@@ -63,9 +63,9 @@
         </div>
         <hr>
         <div class="footer-bottom">
-            <div class="row justify-content-center justify-content-md-between align-items-center gy-4">
-                <div class="col-auto">
-                    <div class="fs-14 text-center text-md-start"><?= get_field('footer', 'options')['copyright'] ?></div>
+            <div class="row justify-content-center justify-content-lg-between align-items-center gy-4">
+                <div class="col-auto col-md-12 col-lg-auto">
+                    <div class="fs-14 text-center text-lg-start"><?= get_field('footer', 'options')['copyright'] ?></div>
                 </div>
                 <div class="col-auto">
                     <?php if (have_rows('socials', 'options')) :
@@ -81,7 +81,7 @@
                     endif;
                     ?>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto col-md-12 col-lg-auto">
                     <div class="row align-items-center justify-content-center gy-5">
                         <div class="col-auto">
                             <?php
@@ -115,7 +115,7 @@
                             endif;
                             ?>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-auto col-md-12 col-lg-auto text-center">
                             <a href="https://www.aiims.com.au/like-our-work/" target="_blank">
                                 <img src="<?= get_template_directory_uri() ?>/images/logo/aiims.png" alt="Aiims">
                             </a>
