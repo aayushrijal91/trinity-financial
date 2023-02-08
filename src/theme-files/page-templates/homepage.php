@@ -34,11 +34,11 @@ get_template_part('parts/section', 'bannerHome');
     <section class="section_2">
         <?php $section_2 = get_field('section_2'); ?>
         <div class="container">
-            <div class="row">
+            <div class="row gy-5">
                 <div class="col-md-6">
                     <div class="fs-70 fw-400 ls-2 lh-1"><?= $section_2['heading'] ?></div>
                     <div class="fs-23 lh-1_87 py-4 py-md-6 description"><?= $section_2['description'] ?></div>
-                    <a href="<?= $section_2['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-4 px-5 fw-600"><?= $section_2['button']['title'] ?></a>
+                    <a href="<?= $section_2['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 fw-600"><?= $section_2['button']['title'] ?></a>
                 </div>
                 <div class="col-md-6">
                     <img src="<?= $section_2['image']['url'] ?>" alt="<?= $section_2['image']['alt'] ?>" class="w-100">

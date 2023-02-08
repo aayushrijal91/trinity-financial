@@ -1,6 +1,6 @@
 <div class="assisted_services">
     <div class="container">
-        <div class="fw-600 fs-50 text-center lh-1_6"><?= get_field('assisted_services', 'options')['heading'] ?></div>
+        <div class="fw-600 fs-50 text-center lh-1_6 heading"><?= get_field('assisted_services', 'options')['heading'] ?></div>
         <div class="row gy-4 gx-xl-6 pt-6 pt-lg-9">
             <?php
             if (have_rows('assisted_services', 'options')) :

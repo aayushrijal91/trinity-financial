@@ -3,9 +3,9 @@
     <div class="container">
         <?php if (!is_page_template('page-templates/faq.php')) : ?>
             <div class="text-center fw-900 fs-57"><?= $client_video['heading'] ?></div>
-            <div class="text-center fw-500 fs-43 lh-2 pt-3"><?= $client_video['sub_heading'] ?></div>
+            <div class="text-center fw-500 fs-43 lh-2 pt-3 sub_heading"><?= $client_video['sub_heading'] ?></div>
         <?php endif; ?>
-        <div class="row gy-4 gx-6 align-items-end<?= is_page_template('page-templates/faq.php') ? '' : ' pt-7' ?>">
+        <div class="row gy-4 gx-6 align-items-end<?= is_page_template('page-templates/faq.php') ? '' : ' pt-5 pt-md-7' ?>">
             <?php
             if (have_rows('client_video', 'options')) :
                 while (have_rows('client_video', 'options')) : the_row();
