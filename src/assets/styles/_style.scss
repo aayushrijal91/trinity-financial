@@ -3,6 +3,10 @@ header {
         background: $light-grey imgUrl('homepage_banner.png') center bottom;
         background-size: contain;
         padding: 104px 0 560px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 90px 0 160px;
+        }
     }
 
     &.subpage_header {
@@ -16,11 +20,30 @@ header {
         background: imgUrl('homepage_section_1.png') left bottom, linear-gradient(90deg, $dark 0% 73%, $primary 73% 100%);
         padding: 140px 0 110px;
         color: $white;
+
+        @include media-breakpoint-down(sm) {
+            background: $dark;
+            padding: 80px 0 48px;
+            
+            .heading {
+                font-size: 1.75rem !important;
+                text-align: center;
+            }
+
+            .sub_heading {
+                font-size: 1.35rem !important;
+                text-align: center;
+            }
+        }
     }
 
     section.section_2 {
         background: $light-grey;
         padding: 177px 0 79px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
 
         .description {
             span {
