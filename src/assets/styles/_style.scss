@@ -308,6 +308,10 @@ header {
     }
 }
 
+section.search_result {
+    padding: 80px 0;
+}
+
 footer {
     background: linear-gradient(90deg, $jet-black 0 30%, $dark 30% 100%);
     color: $white;
