@@ -12,7 +12,7 @@ get_template_part('parts/section', 'banner');
     <section class="section_1">
         <?php $section_1 = get_field('section_1'); ?>
         <div class="container">
-            <div class="text-center fs-50 fw-600 lh-1_6 pb-8"><?= $section_1['heading'] ?></div>
+            <div class="text-center fs-50 fw-600 lh-1_6 pb-6 pb-md-8"><?= $section_1['heading'] ?></div>
             <div class="row justify-content-center g-5">
                 <?php
                 if (have_rows('section_1')) :

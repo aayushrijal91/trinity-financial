@@ -5,9 +5,9 @@ get_template_part('parts/section', 'banner');
 
 <div class="blogs">
     <div class="container">
-        <div class="row gx-7">
-            <div class="col-8">
-                <div class="row g-5">
+        <div class="row gx-md-5 gx-lg-4 gx-xl-7 gy-5">
+            <div class="col-lg-8 order-2 order-md-1">
+                <div class="row g-4 g-xl-5">
                     <?php
                     $args = array(
                         'posts_per_page' => -1,
@@ -46,7 +46,7 @@ get_template_part('parts/section', 'banner');
                     ?>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 order-1 order-md-2">
                 <div class="search d-flex">
                     <div class="pe-3">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

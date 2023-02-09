@@ -11,7 +11,7 @@ get_template_part('parts/section', 'banner');
 <div class="faq">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-9">
+            <div class="col-lg-11 col-xl-9">
                 <div class="heading fs-50 fw-600 text-center lh-1_6"><?= get_field('heading') ?></div>
             </div>
         </div>

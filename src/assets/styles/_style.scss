@@ -16,6 +16,10 @@ header {
     &.subpage_header {
         background: $light-grey;
         padding: 95px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+        }
     }
 }
 
@@ -102,6 +106,10 @@ header {
     section.section_1 {
         padding: 115px 0;
 
+        @include media-breakpoint-down(sm) {
+            padding: 80px 0;
+        }
+
         .team_member {
             .name_card {
                 width: 264px;
@@ -116,8 +124,24 @@ header {
     color: $white;
     letter-spacing: -0.02em;
 
+    @include media-breakpoint-down(lg) {
+        padding: 100px 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
     .heading {
         padding-bottom: 107px;
+
+        @include media-breakpoint-down(xl) {
+            padding-bottom: 64px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 48px;
+        }
 
         span {
             font-weight: 900;
@@ -165,12 +189,24 @@ header {
             flex-direction: column;
             justify-content: space-between;
             align-items: start;
+
+            @include media-breakpoint-only(lg) {
+                padding: 22px 16px;
+            }
         }
     }
 
     .search {
         background: $primary;
         padding: 24px 48px;
+
+        @include media-breakpoint-only(lg) {
+            padding: 24px 16px;
+        }
+
+        @include media-breakpoint-only(sm) {
+            padding: 24px 16px;
+        }
 
         form {
             flex: 1;
@@ -202,6 +238,14 @@ header {
         background: $primary;
         padding: 38px 36px;
         color: $white;
+
+        @include media-breakpoint-only(lg) {
+            padding: 38px 16px;
+        }
+
+        @include media-breakpoint-only(sm) {
+            padding: 38px 16px;
+        }
     }
 
     .recent_posts {
