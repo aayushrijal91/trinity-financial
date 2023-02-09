@@ -62,7 +62,7 @@
     color: $white;
     margin-top: 55px;
 
-    @include media-breakpoint-between(lg, xl) {
+    @include media-breakpoint-between(md, xl) {
         margin-top: 16px;
         padding: 44px 16px;
     }

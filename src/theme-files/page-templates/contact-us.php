@@ -11,7 +11,7 @@ get_template_part('parts/section', 'banner');
 <div class="contact_us">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-5">
+            <div class="col-md-6 col-xl-5">
                 <div class="fw-500 fs-75"><?= the_title() ?></div>
                 <div class="fs-24 lh-1_87 pt-5 pb-4"><?= get_field('footer', 'options')['main_description'] ?></div>
                 <div class="pt-3 pb-5">
@@ -24,7 +24,7 @@ get_template_part('parts/section', 'banner');
                     <img src="<?= get_field('image')['url'] ?>" alt="">
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-md-6 col-xl-5">
                 <div class="contact_us_form">
                     <?= do_shortcode('[contact-form-7 id="133" title="Contact Us"]') ?>
                 </div>
