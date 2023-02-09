@@ -123,24 +123,39 @@
 
 .free_review {
     position: relative;
+    background-color: $light-grey;
+
+    @include media-breakpoint-down(lg) {
+        .main_img {
+            display: none;
+        }
+    }
 
     .inner {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
 
         .part_1 {
-            max-width: 323px;
             background: $primary;
             padding: 60px 28px 53px;
             color: $white;
+
+            @include media-breakpoint-up(md) {
+                max-width: 323px;
+            }
         }
 
         .part_2 {
-            max-width: 325px;
             padding: 41px 31px;
             color: $white;
             background: $black;
+
+            @include media-breakpoint-up(md) {
+                max-width: 325px;
+            }
         }
     }
 }

@@ -1,12 +1,12 @@
 <div class="free_review">
     <?php $free_review = get_field('free_review', 'options'); ?>
-    <img src="<?= get_template_directory_uri() ?>/images/background/frame-stack.jpg" alt="frames" class="w-100">
+    <img src="<?= get_template_directory_uri() ?>/images/background/frame-stack.jpg" alt="frames" class="w-100 main_img">
     <div class="inner">
         <div class="container-fluid">
             <div class="row justify-content-end">
                 <div class="col-xl-11">
-                    <div class="row justify-content-between align-items-end">
-                        <div class="col-auto">
+                    <div class="row justify-content-between align-items-end gx-0">
+                        <div class="col-md-auto">
                             <div class="bg-grey py-5"></div>
                             <div class="part_1">
                                 <div class="fw-500 ls-2 fs-28"><?= $free_review['part_1_title'] ?></div>
@@ -16,7 +16,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-auto">
                             <div class="part_2">
                                 <img src="<?= get_template_directory_uri() ?>/images/logo/tfs-logo.png" alt="TFS">
                                 <div class="fs-25 pt-9"><?= $free_review['part_2_title'] ?></div>

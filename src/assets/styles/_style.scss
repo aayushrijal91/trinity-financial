@@ -260,9 +260,17 @@ header {
     line-height: 1.95;
     padding-bottom: 105px;
 
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+
     ul,
     ol {
         padding-inline-start: 100px;
+
+        @include media-breakpoint-down(sm) {
+            padding-inline-start: 40px;
+        }
 
         li::marker {
             font-weight: 900;
