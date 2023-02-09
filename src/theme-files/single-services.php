@@ -31,7 +31,7 @@ $template = get_field('choose_template');
                                         $button = get_sub_field('button');
                         ?>
                                         <div class="col-md-6 col-lg-4 <?= ($index == 1) ? 'bg-primary' : 'bg-light-grey' ?>">
-                                            <div class="py-6 py-xl-9 px-5 px-xl-7 <?= ($index == 1) ? 'text-white' : 'text-dark' ?>">
+                                            <div class="py-5 py-md-6 py-lg-5 py-xl-6 py-xxl-9 px-4 px-md-5 px-lg-4 px-xl-5 px-xxl-7 <?= ($index == 1) ? 'text-white' : 'text-dark' ?>">
                                                 <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
                                                 <div class="ls-2 fw-600 fs-30 py-4"><?= $title ?></div>
                                                 <div class="lh-1_87 fw-500"><?= $description ?></div>
@@ -59,8 +59,8 @@ $template = get_field('choose_template');
                     <div class="container">
                         <div class="row align-items-center gx-lg-7">
                             <div class="col-lg-7">
-                                <div class="ls-2 fs-60 fw-600 pb-5"><?= $section_1['title'] ?></div>
-                                <div class="ls-2 fs-21 lh-2"><?= $section_1['description'] ?></div>
+                                <div class="ls-2 fs-60 fw-600 pb-4 pb-md-5"><?= $section_1['title'] ?></div>
+                                <div class="ls-2 fs-21 lh-2 description"><?= $section_1['description'] ?></div>
                             </div>
                             <div class="col">
                                 <img src="<?= $section_1['image']['url'] ?>" alt="">
@@ -75,8 +75,8 @@ $template = get_field('choose_template');
                 <div class="section_2 bg-primary text-white">
                     <div class="container">
                         <div class="ls-2 fw-600 fs-60"><?= $section_2['title'] ?></div>
-                        <div class="fs-21 pt-6 pb-7 description"><?= $section_2['description'] ?></div>
-                        <a href="<?= $section_2['button']['url'] ?>" class="btn btn-jet-black fs-21 rounded-0 py-4 px-6 fw-600"><?= $section_2['button']['title'] ?></a>
+                        <div class="fs-21 py-4 py-md-5 pt-lg-6 pb-lg-7 description"><?= $section_2['description'] ?></div>
+                        <a href="<?= $section_2['button']['url'] ?>" class="btn btn-jet-black fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $section_2['button']['title'] ?></a>
                     </div>
                 </div>
             <?php endif; ?>
@@ -85,16 +85,16 @@ $template = get_field('choose_template');
             <?php if (!empty($section_3['title'])) : ?>
                 <div class="section_3">
                     <div class="container">
-                        <div class="row gx-5 align-items-center">
+                        <div class="row g-5 align-items-center">
                             <div class="col-lg-6">
                                 <img src="<?= $section_3['image']['url'] ?>" alt="<?= $section_3['image']['alt'] ?>" class="w-100">
                                 <div class="d-flex justify-content-end pt-5">
-                                    <a href="<?= $section_3['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-4 px-6 fw-600"><?= $section_3['button']['title'] ?></a>
+                                    <a href="<?= $section_3['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $section_3['button']['title'] ?></a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="fs-55 ls-2 fw-600"><?= $section_3['title'] ?></div>
-                                <div class="ls-2 fs-21 lh-2 pt-5"><?= $section_3['description'] ?></div>
+                                <div class="ls-2 fs-21 lh-2 pt-4 pt-md-5 description"><?= $section_3['description'] ?></div>
                             </div>
                         </div>
                     </div>

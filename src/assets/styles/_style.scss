@@ -368,20 +368,43 @@ header {
     .template_2 {
         .section_1 {
             padding: 110px 0 136px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 64px 0;
+            }
         }
 
         .section_2 {
             padding: 141px 0;
 
+            @include media-breakpoint-down(lg) {
+                padding: 120px 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 64px 0;
+            }
+
             .description {
-                column-count: 2;
                 line-height: 1.8;
-                gap: 78px;
+                
+                @include media-breakpoint-up(lg) {
+                    column-count: 2;
+                    gap: 24px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    gap: 78px;
+                }
             }
         }
 
         .section_3 {
             padding: 122px 0;
+
+            @include media-breakpoint-down(sm) {
+                padding: 80px 0;
+            }
         }
     }
 
