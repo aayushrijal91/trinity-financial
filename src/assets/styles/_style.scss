@@ -315,7 +315,7 @@ header {
 
         .description {
             line-height: 1.8;
-            
+
             @include media-breakpoint-up(lg) {
                 column-count: 2;
                 gap: 24px;
@@ -342,22 +342,22 @@ header {
                 bottom: 0;
                 width: 100%;
             }
-    
+
             .part_1 {
                 background: $primary;
                 padding: 60px 28px 53px;
                 color: $white;
-    
+
                 @include media-breakpoint-up(md) {
                     max-width: 323px;
                 }
             }
-    
+
             .part_2 {
                 padding: 41px 31px;
                 color: $white;
                 background: $black;
-    
+
                 @include media-breakpoint-up(md) {
                     max-width: 325px;
                 }
@@ -387,7 +387,7 @@ header {
 
             .description {
                 line-height: 1.8;
-                
+
                 @include media-breakpoint-up(lg) {
                     column-count: 2;
                     gap: 24px;
@@ -411,42 +411,155 @@ header {
     .template_3 {
         padding: 146px 0 126px;
 
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+
+            .heading {
+                font-size: 2rem !important;
+                line-height: 1.25;
+            }
+        }
+
         .grid_container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
+
+            @include media-breakpoint-down(xl) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            @include media-breakpoint-down(lg) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+
+            @include media-breakpoint-down(sm) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+            }
         }
 
         .grid_item {
             border: 1px solid $dark-grey;
             text-align: center;
             padding: 78px 0;
+
+            @include media-breakpoint-down(sm) {
+                padding: 32px 0;
+            }
         }
 
         .grid_item {
+            @include media-breakpoint-up(xl) {
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    border-top: 0;
+                }
 
-            &:first-child,
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
-                border-top: 0;
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8) {
+                    border-bottom: 0;
+                    border-left: 0;
+                }
+
+                &:nth-child(4),
+                &:last-child {
+                    border-right: 0;
+                }
             }
 
-            &:first-child,
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4),
-            &:nth-child(5),
-            &:nth-child(6),
-            &:nth-child(7),
-            &:nth-child(8) {
-                border-bottom: 0;
-                border-left: 0;
+            @include media-breakpoint-only(lg) {
+                &:first-child,
+                &:nth-child(4),
+                &:nth-child(7) {
+                    border-left: 0;
+                }
+
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:last-child {
+                    border-top: 0;
+                }
+
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:last-child {
+                    border-right: 0;
+                }
+
+                &:nth-child(7),
+                &:nth-child(8) {
+                    border-bottom: 0;
+                }
             }
 
-            &:nth-child(4),
-            &:last-child {
-                border-right: 0;
+            @include media-breakpoint-only(md) {
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(7),
+                &:last-child {
+                    border-top: 0;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(7),
+                &:nth-child(8) {
+                    border-bottom: 0;
+                }
+
+                &:nth-child(1),
+                &:nth-child(3),
+                &:nth-child(5),
+                &:nth-child(7) {
+                    border-left: 0;
+                }
+
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7) {
+                    border-bottom: 0;
+                }
             }
         }
     }
@@ -460,6 +573,10 @@ header {
             background: $primary;
             color: $white;
             padding: 132px 0 90px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 64px 0;
+            }
         }
     }
 

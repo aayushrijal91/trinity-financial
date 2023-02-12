@@ -63,7 +63,7 @@ $template = get_field('choose_template');
                                 <div class="ls-2 fs-21 lh-2 description"><?= $section_1['description'] ?></div>
                             </div>
                             <div class="col">
-                                <img src="<?= $section_1['image']['url'] ?>" alt="">
+                                <img src="<?= $section_1['image']['url'] ?>" alt="<?= $section_1['image']['alt'] ?>" class="w-100">
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ $template = get_field('choose_template');
         <?php if (!empty($template_3['title'])) : ?>
             <div class="template_3 bg-primary text-white">
                 <div class="container">
-                    <div class="text-center ls-2 fs-68 fw-600 lh-1_6 pb-9"><?= $template_3['title'] ?></div>
+                    <div class="heading text-center ls-2 fs-68 fw-600 lh-1_6 pb-5 pb-lg-9"><?= $template_3['title'] ?></div>
                     <div class="grid_container">
                         <?php if (have_rows('template_3')) :
                             while (have_rows('template_3')) : the_row();
@@ -135,10 +135,10 @@ $template = get_field('choose_template');
             <?php if (!empty($section_1['title'])) : ?>
                 <div class="section_1">
                     <div class="container">
-                        <div class="row align-items-center gx-lg-6">
+                        <div class="row align-items-center gx-lg-6 gy-5">
                             <div class="col-lg-7">
                                 <div class="ls-2 fs-60 fw-600"><?= $section_1['title'] ?></div>
-                                <div class="ls-2 fs-21 lh-2 py-5"><?= $section_1['description'] ?></div>
+                                <div class="ls-2 fs-21 lh-2 py-4 py-md-5 description"><?= $section_1['description'] ?></div>
                                 <a href="<?= $section_1['button']['url'] ?>" class="btn btn-primary fs-23 ls-2 rounded-0 py-3 px-4 px-lg-5 fw-600"><?= $section_1['button']['title'] ?></a>
                             </div>
                             <div class="col">
@@ -153,7 +153,7 @@ $template = get_field('choose_template');
                 <div class="section_2">
                     <div class="container">
                         <div class="text-center fs-50 fw-600 ls-2"><?= $section_2['title'] ?></div>
-                        <div class="text-center fs-24 lh-1_87 pt-6 pb-4"><?= $section_2['description'] ?></div>
+                        <div class="text-center fs-24 lh-1_87 pt-6 pb-4 description"><?= $section_2['description'] ?></div>
                         <div class="accordion-container">
                             <?php if (have_rows('template_4')) :
                                 while (have_rows('template_4')) : the_row();
@@ -274,7 +274,7 @@ $template = get_field('choose_template');
                         <div class="col-xl-11">
                             <div class="row justify-content-between align-items-end">
                                 <div class="col-auto">
-                                    <div class="bg-grey py-5"></div>
+                                    <div class="bg-grey py-4 py-xl-5"></div>
                                     <div class="part_1">
                                         <div class="fw-500 ls-2 fs-28"><?= $footer['part_1_title'] ?></div>
                                         <a href="<?= $footer['part_1_button']['url'] ?>" target="<?= $footer['part_1_button']['target'] ?>" class="btn fs-21 fw-500 text-white rounded-0 px-0 mt-6"><?= $footer['part_1_button']['title'] ?> <span class="ps-4"><svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -286,10 +286,10 @@ $template = get_field('choose_template');
                                 <div class="col-auto">
                                     <div class="part_2">
                                         <img src="<?= get_template_directory_uri() ?>/images/logo/tfs-logo.png" alt="TFS">
-                                        <div class="fs-25 pt-9"><?= $footer['part_2_title'] ?></div>
+                                        <div class="fs-25 pt-5 pt-xl-9"><?= $footer['part_2_title'] ?></div>
                                     </div>
                                     <div class="bg-white">
-                                        <a href="<?= $footer['part_2_button']['url'] ?>" target="<?= $footer['part_2_button']['target'] ?>" class="btn fs-21 fw-500 text-primary rounded-0 p-5"><?= $footer['part_2_button']['title'] ?> <span class="ps-4"><svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <a href="<?= $footer['part_2_button']['url'] ?>" target="<?= $footer['part_2_button']['target'] ?>" class="btn fs-21 fw-500 text-primary rounded-0 p-4 p-xl-5"><?= $footer['part_2_button']['title'] ?> <span class="ps-4"><svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M19.7643 7.65795L13.0447 1.77827C12.7223 1.49619 12.6897 1.00619 12.9717 0.683822C13.2538 0.361452 13.7438 0.328785 14.0662 0.610859L22.3393 7.84986C22.6925 8.15887 22.6925 8.70825 22.3393 9.01726L14.0662 16.2563C13.7438 16.5383 13.2538 16.5057 12.9717 16.1833C12.6897 15.8609 12.7223 15.3709 13.0447 15.0889L19.7643 9.20916H1.65842C1.23006 9.20916 0.882812 8.86191 0.882812 8.43355C0.882812 8.0052 1.23006 7.65795 1.65842 7.65795H19.7643Z" fill="#2B3484" />
                                                 </svg>
                                             </span>
