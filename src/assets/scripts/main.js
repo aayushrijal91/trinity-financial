@@ -8,6 +8,13 @@ jQuery(function ($) {
                     duration: 1500,
                 });
                 $(() => {
+                    $('#close-slidenav').on('click', function () {
+                        $('.slide-nav').removeClass('nav-open');
+                    });
+
+                    $('#triggerSlideNav').on('click', function () {
+                        $('.slide-nav').addClass('nav-open');
+                    });
 
                     $(".accordion-head").on('click', function () {
                         $(".accordion-head").removeClass("active");

@@ -14,20 +14,17 @@
             </div>
             <img src="<?= get_field('slide_nav_logo', 'options')['url'] ?>" class="py-5" alt="<?= get_field('slide_nav_logo', 'options')['alt'] ?>">
             <?php wp_nav_menu(array(
-                'menu' => 'Mobile Menu',
+                'menu' => 'Primary Menu',
                 'menu_class' => 'navbar-nav',
                 'item_class' => 'nav-item',
                 'link_class' => 'nav-link',
-                'container_class' => 'ms-auto mobile-menu py-2',
+                'container_class' => 'primary_menu',
                 'container_id' => '',
             )); ?>
         </div>
-        <div class="row align-items-center nav-btns g-2">
-            <div class="col-12">
-                <hr>
-            </div>
+        <div class="row align-items-center nav-btns">
             <div class="col-6">
-                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-light rounded-2 text-primary">
+                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn rounded-2 text-white px-0 d-flex justify-content-center align-items-center">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16 6.96151H14.6078C14.6061 5.48498 14.0188 4.06939 12.9748 3.02532C11.9308 1.98125 10.5153 1.39396 9.03879 1.3923V0C10.8844 0.00202691 12.6538 0.736121 13.9589 2.04122C15.2639 3.34632 15.998 5.11583 16 6.96151Z" fill="#0383BF" />
                         <path d="M13.2155 6.96151H11.8233C11.8233 6.22299 11.5299 5.51472 11.0077 4.9925C10.4855 4.47029 9.77728 4.17691 9.03879 4.17691V2.78461C10.1462 2.78571 11.2079 3.22613 11.991 4.00921C12.774 4.7923 13.2144 5.85407 13.2155 6.96151Z" fill="#0383BF" />
@@ -37,7 +34,7 @@
                 </a>
             </div>
             <div class="col-6">
-                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-secondary rounded-2 text-white">
+                <a href="tel:<?= get_field('phone_number', 'options') ?>" class="btn btn-secondary rounded-2 text-white d-flex justify-content-center align-items-center">
                     Book Online
                 </a>
             </div>
@@ -45,12 +42,12 @@
     </div>
     <div class="navigation">
         <div class="container-fluid px-xl-0">
-            <nav class="navbar navbar-expand-xl navbar-light py-0">
+            <nav class="navbar navbar-expand-xl navbar-light py-3 py-md-2">
                 <a href="javascript:void(0)" class="pe-4 d-xl-none" id="triggerSlideNav">
-                    <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.89543 0 2 0H30C31.1046 0 32 0.89543 32 2C32 3.10457 31.1046 4 30 4H2C0.89543 4 0 3.10457 0 2Z" fill="#1F2527" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 10.8954 0.89543 10 2 10H30C31.1046 10 32 10.8954 32 12C32 13.1046 31.1046 14 30 14H2C0.89543 14 0 13.1046 0 12Z" fill="#1F2527" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 22C0 20.8954 0.89543 20 2 20H30C31.1046 20 32 20.8954 32 22C32 23.1046 31.1046 24 30 24H2C0.89543 24 0 23.1046 0 22Z" fill="#1F2527" />
+                    <svg width="32" height="24" viewBox="0 0 32 24" fill="#363F94" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.89543 0 2 0H30C31.1046 0 32 0.89543 32 2C32 3.10457 31.1046 4 30 4H2C0.89543 4 0 3.10457 0 2Z" fill="#363F94" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 10.8954 0.89543 10 2 10H30C31.1046 10 32 10.8954 32 12C32 13.1046 31.1046 14 30 14H2C0.89543 14 0 13.1046 0 12Z" fill="#363F94" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 22C0 20.8954 0.89543 20 2 20H30C31.1046 20 32 20.8954 32 22C32 23.1046 31.1046 24 30 24H2C0.89543 24 0 23.1046 0 22Z" fill="#363F94" />
                     </svg>
                 </a>
 

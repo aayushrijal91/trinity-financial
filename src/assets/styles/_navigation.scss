@@ -39,6 +39,10 @@
     .navigation {
         border-bottom: 2px solid $dark-grey;
 
+        .navbar {
+            flex-wrap: nowrap;
+        }
+
         .navbar-brand {
             max-width: 437px;
         }
