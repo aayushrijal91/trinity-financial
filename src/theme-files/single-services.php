@@ -16,6 +16,16 @@ $template = get_field('choose_template');
     <?php endif; ?>
     <?php if ($template == 'Template 1') : ?>
         <div class="template_1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 position-relative">
+                        <div class="floating_card">
+                            <div class="fw-800 fs-30 ls-2">Stress-Free Loan Process</div>
+                            <div class="fs-21 ls-2 fw-500 pt-3">Here are a few things that can help make your investment loan process stress-free:</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php $section_1 = get_field('template_1')['section_1']; ?>
             <div class="section_1">
                 <div class="container-fluid">

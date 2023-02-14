@@ -365,6 +365,18 @@ header {
         }
     }
 
+    .template_1 {
+        .floating_card {
+            position: absolute;
+            padding: 48px 79px;
+            max-width: 609px;
+            color: $primary;
+            background: $white;
+            box-shadow: 0px 17.9522px 35.9045px rgba(0, 0, 0, 0.1);
+            top: -111px;
+        }
+    }
+
     .template_2 {
         .section_1 {
             padding: 110px 0 136px;
@@ -453,6 +465,7 @@ header {
 
         .grid_item {
             @include media-breakpoint-up(xl) {
+
                 &:first-child,
                 &:nth-child(2),
                 &:nth-child(3),
@@ -479,6 +492,7 @@ header {
             }
 
             @include media-breakpoint-only(lg) {
+
                 &:first-child,
                 &:nth-child(4),
                 &:nth-child(7) {
@@ -514,6 +528,7 @@ header {
             }
 
             @include media-breakpoint-only(md) {
+
                 &:first-child,
                 &:nth-child(2),
                 &:nth-child(3),

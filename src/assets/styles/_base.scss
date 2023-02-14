@@ -109,6 +109,11 @@ a {
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem;
             }
+
+            a {
+                color: $white !important;
+                text-decoration: underline;
+            }
         }
     }
 
