@@ -6,7 +6,7 @@ get_template_part('parts/section', 'banner');
     <div class="container">
         <?= the_content() ?>
     </div>
-    <div class="blog_bottom lazyload" data-src="<?= get_the_post_thumbnail_url($post->ID, 'full') ?>">
+    <div class="cta_footer lazyload" data-src="<?= get_the_post_thumbnail_url($post->ID, 'full') ?>">
         <?php $free_review = get_field('free_review', 'options'); ?>
         <img src="<?= get_template_directory_uri() ?>/images/background/bottom.png" alt="bottom" class="bottom_img">
         <div class="w-100 position-relative">
@@ -15,7 +15,7 @@ get_template_part('parts/section', 'banner');
                     <div class="col-xl-11">
                         <div class="row justify-content-between align-items-end gx-0">
                             <div class="col-md-auto">
-                                <div class="bg-grey py-5"></div>
+                                <div class="bg-grey py-4 py-xl-5"></div>
                                 <div class="part_1">
                                     <div class="fw-500 fs-28 lh-1_4"><?= $free_review['part_1_title'] ?></div>
                                     <a href="<?= $free_review['part_1_button']['url'] ?>" target="<?= $free_review['part_1_button']['target'] ?>" class="btn fs-21 fw-500 text-white rounded-0 px-0 mt-6"><?= $free_review['part_1_button']['title'] ?> <span class="ps-4"><svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,10 +27,10 @@ get_template_part('parts/section', 'banner');
                             <div class="col-md-auto">
                                 <div class="part_2">
                                     <img src="<?= get_template_directory_uri() ?>/images/logo/tfs-logo.png" alt="TFS">
-                                    <div class="fs-25 pt-9 lh-1_4"><?= $free_review['part_2_title'] ?></div>
+                                    <div class="fs-25 pt-5 pt-xl-9 lh-1_4"><?= $free_review['part_2_title'] ?></div>
                                 </div>
                                 <div class="bg-white">
-                                    <a href="<?= $free_review['part_2_button']['url'] ?>" target="<?= $free_review['part_2_button']['target'] ?>" class="btn fs-21 fw-500 text-primary rounded-0 p-5"><?= $free_review['part_2_button']['title'] ?> <span class="ps-4"><svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <a href="<?= $free_review['part_2_button']['url'] ?>" target="<?= $free_review['part_2_button']['target'] ?>" class="btn fs-21 fw-500 text-primary rounded-0 p-4 p-xl-5"><?= $free_review['part_2_button']['title'] ?> <span class="ps-4"><svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.7643 7.65795L13.0447 1.77827C12.7223 1.49619 12.6897 1.00619 12.9717 0.683822C13.2538 0.361452 13.7438 0.328785 14.0662 0.610859L22.3393 7.84986C22.6925 8.15887 22.6925 8.70825 22.3393 9.01726L14.0662 16.2563C13.7438 16.5383 13.2538 16.5057 12.9717 16.1833C12.6897 15.8609 12.7223 15.3709 13.0447 15.0889L19.7643 9.20916H1.65842C1.23006 9.20916 0.882812 8.86191 0.882812 8.43355C0.882812 8.0052 1.23006 7.65795 1.65842 7.65795H19.7643Z" fill="#2B3484" />
                                             </svg>
                                         </span>

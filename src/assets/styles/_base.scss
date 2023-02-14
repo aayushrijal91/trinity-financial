@@ -122,20 +122,39 @@ a {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-    line-height: 1;
-    font-weight: 400;
+.cta_footer {
+    height: 838px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: end;
+
+    .bottom_img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .part_1 {
+        background: $primary;
+        padding: 60px 28px 53px;
+        color: $white;
+
+        @include media-breakpoint-up(md) {
+            max-width: 323px;
+        }
+    }
+
+    .part_2 {
+        padding: 41px 31px;
+        color: $white;
+        background: $black;
+
+        @include media-breakpoint-up(md) {
+            max-width: 325px;
+        }
+    }
 }
 
 .object-fit-cover {

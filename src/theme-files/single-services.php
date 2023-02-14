@@ -286,9 +286,9 @@ $template = get_field('choose_template');
 
     <?php $footer = get_field('footer'); ?>
     <?php if (!empty($footer['image']['url'])) : ?>
-        <div class="footer">
-            <img src="<?= $footer['image']['url'] ?>" alt="frames" class="main_img w-100">
-            <div class="inner">
+        <div class="cta_footer lazyload" data-src="<?= $footer['image']['url'] ?>">
+            <img src="<?= get_template_directory_uri() ?>/images/background/bottom.png" alt="bottom" class="bottom_img">
+            <div class="w-100 position-relative">
                 <div class="container-fluid">
                     <div class="row justify-content-end">
                         <div class="col-xl-11">
