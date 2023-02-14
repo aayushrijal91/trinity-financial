@@ -10,7 +10,7 @@ $template = get_field('choose_template');
             <div class="container">
                 <div class="ls-2 fw-900 fs-60"><?= $header['title'] ?></div>
                 <div class="fs-21 py-4 py-md-5 <?= $header['button'] ? 'pt-lg-6 pb-lg-7' : ''; ?> description"><?= $header['description'] ?></div>
-                <?php if($header['button']) { ?>
+                <?php if ($header['button']) { ?>
                     <a href="<?= $header['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $header['button']['title'] ?></a>
                 <?php } ?>
             </div>
@@ -97,16 +97,24 @@ $template = get_field('choose_template');
             <?php if (!empty($section_3['title'])) : ?>
                 <div class="section_3">
                     <div class="container">
-                        <div class="row g-5 align-items-center">
+                        <div class="row g-5 <?= $section_3['button_position'] == 'Right' ? 'align-items-end' : 'align-items-center' ?>">
                             <div class="col-lg-6">
                                 <img src="<?= $section_3['image']['url'] ?>" alt="<?= $section_3['image']['alt'] ?>" class="w-100">
-                                <div class="d-flex justify-content-end pt-5">
-                                    <a href="<?= $section_3['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $section_3['button']['title'] ?></a>
-                                </div>
+
+                                <?php if ($section_3['button_position'] == 'Left') { ?>
+                                    <div class="d-flex justify-content-end pt-5">
+                                        <a href="<?= $section_3['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $section_3['button']['title'] ?></a>
+                                    </div>
+                                <?php } ?>
                             </div>
                             <div class="col-lg-6">
                                 <div class="fs-55 ls-2 fw-600"><?= $section_3['title'] ?></div>
                                 <div class="ls-2 fs-21 lh-2 pt-4 pt-md-5 description"><?= $section_3['description'] ?></div>
+                                <?php if ($section_3['button_position'] == 'Right') { ?>
+                                    <div class="py-5">
+                                        <a href="<?= $section_3['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $section_3['button']['title'] ?></a>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
