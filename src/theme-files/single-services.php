@@ -9,8 +9,10 @@ $template = get_field('choose_template');
         <div class="header">
             <div class="container">
                 <div class="ls-2 fw-900 fs-60"><?= $header['title'] ?></div>
-                <div class="fs-21 py-4 py-md-5 pt-lg-6 pb-lg-7 description"><?= $header['description'] ?></div>
-                <a href="<?= $header['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $header['button']['title'] ?></a>
+                <div class="fs-21 py-4 py-md-5 <?= $header['button'] ? 'pt-lg-6 pb-lg-7' : ''; ?> description"><?= $header['description'] ?></div>
+                <?php if($header['button']) { ?>
+                    <a href="<?= $header['button']['url'] ?>" class="btn btn-primary fs-21 rounded-0 py-3 py-md-4 px-5 px-md-6 fw-600"><?= $header['button']['title'] ?></a>
+                <?php } ?>
             </div>
         </div>
     <?php endif; ?>

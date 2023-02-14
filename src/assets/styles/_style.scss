@@ -2,7 +2,7 @@ header {
     &.homepage_header {
         background: $light-grey imgUrl('homepage_banner.png') center bottom;
         background-size: contain;
-        padding: 104px 0 560px;
+        padding-top: 104px;
 
         @include media-breakpoint-down(lg) {
             padding: 104px 0 260px;
@@ -10,6 +10,30 @@ header {
 
         @include media-breakpoint-down(sm) {
             padding: 90px 0 160px;
+        }
+
+        .banner_bottom {
+            padding-top: 39px;
+
+            .part_1 {
+                background: $primary;
+                padding: 60px 28px 53px;
+                color: $white;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 323px;
+                }
+            }
+
+            .part_2 {
+                padding: 41px 31px;
+                color: $white;
+                background: $black;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 325px;
+                }
+            }
         }
     }
 
