@@ -23,7 +23,7 @@ get_template_part('parts/section', 'bannerHome');
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-5">
-                    <div class="contact_us_form">
+                    <div class="contact_us_form" id="contact_us_form">
                         <?= do_shortcode('[contact-form-7 id="133" title="Contact Us"]') ?>
                     </div>
                 </div>

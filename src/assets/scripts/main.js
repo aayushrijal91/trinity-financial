@@ -59,3 +59,13 @@ jQuery('#back-top').click(function () {
     }, 1000);
     return false;
 });
+
+document.querySelectorAll('a[href="#contact_us_form"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
