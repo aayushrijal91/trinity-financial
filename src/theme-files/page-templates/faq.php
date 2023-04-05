@@ -55,6 +55,6 @@ get_template_part('parts/section', 'banner');
         </div>
     </div>
 </div>
-<?php get_template_part('parts/section', 'client_video'); ?>
+<?php get_template_part('parts/section', 'testimonials'); ?>
 
 <?php get_footer(); ?>

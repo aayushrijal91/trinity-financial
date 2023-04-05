@@ -28,6 +28,6 @@ get_template_part('parts/section', 'banner');
     </section>
 
     <?php get_template_part('parts/section', 'assisted_services'); ?>
-    <?php get_template_part('parts/section', 'client_video'); ?>
+    <?php get_template_part('parts/section', 'testimonials'); ?>
 </div>
 <?php get_footer(); ?>
