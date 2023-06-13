@@ -68,7 +68,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href="<?= get_site_url() ?>" class="btn btn-primary text-white py-2 px-5 fw-600">
+                            <a href="<?= get_site_url() ?>/contact-us" class="btn btn-primary text-white py-2 px-5 fw-600">
                                 Apply Now
                             </a>
                         </div>
